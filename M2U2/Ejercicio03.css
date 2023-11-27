@@ -1,0 +1,36 @@
+.contenedor{
+    position: static;
+    border-style: solid;
+    border: 1px 1px 1px 1px;
+    border-color: black;
+    display: flex;
+    height: 200px;
+    justify-content: space-between;
+}
+
+.item:first-child {
+    display: flex;
+    background-color: red;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+}
+
+.item:nth-child(2){
+    color: white;
+    display: flex;
+    background-color: blue;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+}
+
+.item:nth-child(3) {
+    color: white;
+    display: flex;
+    background-color: green;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+}
