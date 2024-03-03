@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+</head>
+<body>
+    <script>
+         metros = parseInt(prompt('Ingrese el número numero de metros que va a recorrer una persona:', ''));
+ 
+        if (metros == 0 || metros < 1000) { 
+            document.write('La persona hara el recorrido a pie.');
+        } else if (metros == 1000 || metros < 10000) {
+            document.write('La persona hara el recorrido en bicicleta.');
+        } else if (metros == 10000 || metros < 30000) {
+            document.write('La persona hara el recorrido en colectivo.');
+        } 
+          else if (metros == 30000 || metros < 100000) {
+            document.write('La persona hara el recorrido en auto.');
+        } else {
+            document.write('La persona hara el recorrido en avion.');
+        }
+ 
+    </script>
+</body>
+</html>
