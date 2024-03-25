@@ -1,17 +1,19 @@
 var express = require('express');
 var router = express.Router();
 var nodemailer = require('nodemailer');
+var contactoModel = require('../models/contactoModel');
+
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
-  res.render('contacto', {
+  res.render('contacto',{
     isContacto: true
   });
 });
 
 router.post('/', async (req, res, next) => {
 
-  //console.log(req.body)
+  console.log(req.body)
   var nombre = req.body.nombre;
   var email = req.body.email;
   var telefono = req.body.telefono;
@@ -19,7 +21,7 @@ router.post('/', async (req, res, next) => {
   var comentario = req.body.comentario;
 
   var obj = {
-    to: 'mariano14031997@gmail.com',
+    to: 'mariano_alaines@hotmail.com',
     subject: 'contacto desde la web',
     html: nombre + "se contacto atraves y quiere mas info a este correo: " + email + ". <br> Ademas, hizo el siguiente comentario: " + comentario + ". <br> Su tel es: " + telefono + ".<br> de la ciudad de: " + ubicacion
   }
@@ -34,10 +36,12 @@ router.post('/', async (req, res, next) => {
   })
 
   var info = await transporter.sendMail(obj);
+  var contacto = await contactoModel.insertContacto(req.body)
+
 
   res.render('contacto', {
     isContacto: true,
-    message: 'mensaje enviado correctamente'
+    message: 'Mensaje enviado correctamente'
   });
 
 });
