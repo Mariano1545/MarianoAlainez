@@ -1,0 +1,39 @@
+  <h2>Contacto</h2>
+            <p>
+                El Centro de Atención al Cliente (CAC) de Electro Movilidad es una forma de contacto directo que nos
+                permite brindarte ayuda en el momento que lo necesitás.
+
+                Podés contactarnos llamando al 0800-888-ELEM (3536), de lunes a viernes de 8 a 20 hs, por mail a
+                ATECLIEN@electromovilidad.com o completando este formulario. También podés hablar con nostros por WhatsApp: 11 134845278 iniciá
+                conversación.
+
+                Ademas podés dejarnos tus consultas online registrándote en www.electromovilidad.com.ar.
+            </p>
+        </div>
+        <div class="contacto">
+            <h3>Contactenos</h3>
+            <form action="/contacto" method="post" class="formulario">
+                <p>
+                    <label for="nombre">Nombre</label>
+                    <input type="text" name="nombre">
+                </p>
+                <p>
+                    <label for="email">Email</label>
+                    <input type="text" name="email">
+                </p>
+                <p>
+                    <label for="telefono">Telefono</label>
+                    <input type="text" name="telefono">
+                </p>
+                <p>
+                    <label for="ubicacion">Ubicacion</label>
+                    <input type="text" name="ubicacion">
+                </p>
+                <p>
+                    <label for="comentario">Comentario</label>
+                    <textarea name="comentario"></textarea>
+                </p>
+                <p class="acciones"><input type="submit" value="Enviar" /></p>
+            </form>
+            <p>{{message}}</p>
+        </div>

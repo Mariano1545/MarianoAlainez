@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electro Movilidad</title>
+    <link rel="stylesheet" href="/stylesheets/normalize.css">
+    <link rel="stylesheet" href="/stylesheets/EM.css">
+</head>
+
+<body>
+    <header>
+        <div class="holder">
+            <img src="images/img.png" alt="Electro Movilidad">
+            <h1>Electro Movilidad</h1>
+        </div>
+    </header>
+    <nav>
+        <div class="holder">
+            <ul>
+                <li><a class="{{#if isInicio}}activo{{/if}}" href="/">Inicio</a></li>
+                <li><a class="{{#if isNuproductos}}activo{{/if}}" href="/nuproductos">Nuestros Productos</a></li>
+                <li><a class="{{#if isPostventa}}activo{{/if}}" href="/postventa">Postventa</a></li>
+                <li><a class="{{#if isNosotros}}activo{{/if}}" href="/nosotros">Quienes Somos?</a></li>
+                <li><a class="{{#if isContacto}}activo{{/if}}" href="/contacto">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main class="holder">
+    {{{body}}}
+  </main>
+    <footer>
+        <p>Diseñado por Mariano Alainez - &copy; 2024</p>
+    </footer>
+
+</body>
+
+</html>
+
